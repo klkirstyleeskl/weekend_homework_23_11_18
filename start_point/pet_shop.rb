@@ -23,15 +23,56 @@ def pets_sold (number_of_pets_sold)
   return number_of_pets_sold[:admin][:pets_sold]
 end
 
-#return stock count
+#return pet number increase
+def increase_pets_sold (pets_sold, amount)
+# get current pet number
+  current_sold = pets_sold[:admin][:pets_sold]
+# set new value
+  increase_pets_sold = current_sold + amount
+#return new value
+  pets_sold[:admin][:pets_sold] = increase_pets_sold
+end
 
-#return find pet by name
 
-#return remove pet by name
+#return stock increase
+def stock_count (stock_count)
+return stock_count[:pets].count
+end
 
-#return add pet to stock
+#retun pets by breed found
+def pets_by_breed(petshop, breed)
+  pets_found = petshop[:pets]
+  # loop over pet shop array
+  pets_array = []
+  for pet in pets_found
+      if pet[:breed] == breed
+        pets_array << pet
+      end
+  end
+  return pets_array
+  return nil
+end
+
+
+def find_pet_by_name(petshop, name)
+for  pet in petshop[:pets]
+  if pet[:name] == name
+    return pet
+    end
+  end
+  return nil
+end
+
+def remove_pet_by_name(petshop, name)
+pet_delete = find_pet_by_name(petshop, name)
+petshop[:pets].delete(pet_delete)
+end
 
 #return test customer cash
+# def customer_cash(customers,num)
+#   num = customers[@customers][:cash][0]
+#   return num
+# end
 
 #return remove customer cash
 
