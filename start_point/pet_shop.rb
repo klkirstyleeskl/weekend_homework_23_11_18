@@ -1,12 +1,17 @@
 #return pet shop name
-def pet_shop_name (shop, name)
-  return pet_shop_name[:name]
+def pet_shop_name (petshop)
+  return petshop[:name]
 end
 
 # return total cash
-
+def total_cash (cash)
+  return cash[@pet_shop][:admin][:total_cash]
+end
 
 #return total cash add
+def total_cash_add
+
+end
 
 #return total cash remove
 
