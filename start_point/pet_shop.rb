@@ -34,9 +34,9 @@ def increase_pets_sold (pets_sold, amount)
 end
 
 
-#return stock increase
-def stock_count (stock_count)
-return stock_count[:pets].count
+#return stock number
+def stock_count (petshop)
+return petshop[:pets].count
 end
 
 #retun pets by breed found
@@ -68,11 +68,19 @@ pet_delete = find_pet_by_name(petshop, name)
 petshop[:pets].delete(pet_delete)
 end
 
-#return test customer cash
-# def customer_cash(customers,num)
-#   num = customers[@customers][:cash][0]
-#   return num
-# end
+def add_pet_to_stock (petshop, new_pet)
+petshop[:pets] << new_pet
+end
+
+
+return test customer cash
+def customer_cash(customers,num)
+  num = customers[@customers][:cash][0]
+  return num
+end
+
+
+
 
 #return remove customer cash
 
