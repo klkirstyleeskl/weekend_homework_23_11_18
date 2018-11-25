@@ -73,19 +73,26 @@ petshop[:pets] << new_pet
 end
 
 
-return test customer cash
-def customer_cash(customers,num)
-  num = customers[@customers][:cash][0]
-  return num
+def customer_cash (customer)
+  return customer[:cash]
 end
 
-
-
-
-#return remove customer cash
+# return remove customer cash
+def remove_customer_cash(customer, amount)
+# get current pet number
+  current_customer_amount = customer[:cash]
+# set new value
+  decrease_customer_cash = current_customer_amount - amount
+#return new value
+  customer[:cash] = decrease_customer_cash
+end
 
 #return customer pet count
+def customer_pet_count (petshop)
+return petshop[:cash].count
+end
 
 #return add pet to customer
+
 
 #extra
