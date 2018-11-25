@@ -88,11 +88,20 @@ def remove_customer_cash(customer, amount)
 end
 
 #return customer pet count
-def customer_pet_count (petshop)
-return petshop[:cash].count
+def customer_pet_count(customer)
+  customer_pets_found = customer[:pets]
+  customer_pets_array = []
+  for customer_pet in customer_pets_found
+      if customer_pet[:pets] == name
+        customer_pets_array << name
+      end
+    end
 end
 
 #return add pet to customer
+def add_pet_to_customer (customer, new_customer_pet)
+customer[:pets] << new_customer_pet
+end
 
 
 #extra
